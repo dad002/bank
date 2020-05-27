@@ -1,0 +1,11 @@
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.exe
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.deps.json
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.runtimeconfig.json
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.runtimeconfig.dev.json
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.dll
+D:\VSProjects\TestSocetClient\bin\Debug\netcoreapp3.1\TestSocetClient.pdb
+D:\VSProjects\TestSocetClient\obj\Debug\netcoreapp3.1\TestSocetClient.csprojAssemblyReference.cache
+D:\VSProjects\TestSocetClient\obj\Debug\netcoreapp3.1\TestSocetClient.AssemblyInfoInputs.cache
+D:\VSProjects\TestSocetClient\obj\Debug\netcoreapp3.1\TestSocetClient.AssemblyInfo.cs
+D:\VSProjects\TestSocetClient\obj\Debug\netcoreapp3.1\TestSocetClient.dll
+D:\VSProjects\TestSocetClient\obj\Debug\netcoreapp3.1\TestSocetClient.pdb

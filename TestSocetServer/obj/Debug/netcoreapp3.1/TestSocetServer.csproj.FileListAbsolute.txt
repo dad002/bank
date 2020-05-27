@@ -1,0 +1,16 @@
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.exe
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.deps.json
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.runtimeconfig.json
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.runtimeconfig.dev.json
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.dll
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\TestSocetServer.pdb
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.csprojAssemblyReference.cache
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.AssemblyInfoInputs.cache
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.AssemblyInfo.cs
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.dll
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.pdb
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\runtimes\linux-x64\native\libsqlite3.so
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\runtimes\osx-x64\native\libsqlite3.dylib
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\runtimes\win7-x64\native\sqlite3.dll
+D:\VSProjects\TestSocetServer\bin\Debug\netcoreapp3.1\runtimes\win7-x86\native\sqlite3.dll
+D:\VSProjects\TestSocetServer\obj\Debug\netcoreapp3.1\TestSocetServer.csproj.CopyComplete
