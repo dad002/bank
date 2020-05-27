@@ -28,7 +28,7 @@ namespace TestSocetServer
                 SQLiteConnection.CreateFile(dbFileName);
 
             try {
-                dbConnection = new SQLiteConnection("Data source=" + dbFileName + ";Version 1;");
+                dbConnection = new SQLiteConnection("Data Source=" + dbFileName + ";Vertion=1");
                 dbConnection.Open();
                 dbCommand.Connection = dbConnection;
                 status = true;

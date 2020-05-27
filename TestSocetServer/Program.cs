@@ -9,6 +9,7 @@ namespace TestSocetServer
     {
         static void Main(string[] args)
         {
+            Sqlite test = new Sqlite("bank.db");
             // Устанавливаем для сокета локальную конечную точку
             Server serv = new Server();
             IPHostEntry ipHost = Dns.GetHostEntry("localhost");
