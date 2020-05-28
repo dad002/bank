@@ -95,7 +95,7 @@ namespace TestSocetServer
                 SQLiteDataReader reader = dbCommand.ExecuteReader();
                 while (reader.Read())
                 {
-                    result.Add(new UserData(reader.GetString(1), reader.GetString(2)));
+                    result.Add(new UserData(reader.GetInt32(0),reader.GetString(1), reader.GetString(2)));
                 }
                 reader.Close();
             }
@@ -147,7 +147,7 @@ namespace TestSocetServer
 
             try
             {
-                dbCommand.CommandText = String.Format("SELECT ID FROM Users WHERE Login={0}", login);
+                dbCommand.CommandText = String.Format("SELECT ID FROM Users WHERE Login='{0}'", login);
                 SQLiteDataReader reader = dbCommand.ExecuteReader();
                 reader.Read();
                 result = reader.GetInt32(0);

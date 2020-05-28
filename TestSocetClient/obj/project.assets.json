@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\VSProjects\\TestSocetClient\\TestSocetClient.csproj",
+      "projectUniqueName": "D:\\VSProjects\\bank\\TestSocetClient\\TestSocetClient.csproj",
       "projectName": "TestSocetClient",
-      "projectPath": "D:\\VSProjects\\TestSocetClient\\TestSocetClient.csproj",
+      "projectPath": "D:\\VSProjects\\bank\\TestSocetClient\\TestSocetClient.csproj",
       "packagesPath": "C:\\Users\\T\\.nuget\\packages\\",
-      "outputPath": "D:\\VSProjects\\TestSocetClient\\obj\\",
+      "outputPath": "D:\\VSProjects\\bank\\TestSocetClient\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\T\\AppData\\Roaming\\NuGet\\NuGet.Config",

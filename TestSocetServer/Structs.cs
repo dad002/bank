@@ -5,11 +5,13 @@ using System.Text;
 namespace TestSocetServer
 {
     struct UserData {
+        public int userID;
         public string login;
         public string hPassword;
 
-        public UserData(string login, string hPassword)
+        public UserData(int userID, string login, string hPassword)
         {
+            this.userID = userID;
             this.login = login;
             this.hPassword = hPassword;
         }

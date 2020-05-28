@@ -16,20 +16,22 @@ namespace TestSocetServer
             aData = sData.getAccounts();
         }
 
-        public void register(string login, string hPassword) {
+        public int register(string login, string hPassword) {
 
             bool exist = false;
 
-            foreach (UserData user in uData) {
-                if (user.login == login) {
-                    exist = true; 
-                }
-            }
+            //foreach (UserData user in uData) {
+            //    if (user.login == login) {
+            //        exist = true; 
+            //    }
+            //}
 
             if (!exist) {
                 sData.addUser(login, hPassword);
+                return sData.getUserIDByLogin(login);
             }
 
+            return -1;
             refresh();
 
         }

@@ -8,22 +8,10 @@ namespace TestSocetServer
 {
     class Program
     {
+        static Manager man = new Manager();
         static void Main(string[] args)
         {
-            Sqlite sql = new Sqlite("bank.db");
-            sql.addUser("test", "as123");
-            sql.addAccount(0);
-            List<UserData> test = sql.getUsers();
-
-            foreach (UserData user in test) {
-                Console.WriteLine(String.Format("{0} {1}" , user.login, user.hPassword));
-            }
-
-            List<AccountData> testA = sql.getAccounts();
-
-            foreach (AccountData acc in testA) {
-                Console.WriteLine(String.Format("{0} {1}", acc.accountID, acc.userID));
-            }
+            
             // Устанавливаем для сокета локальную конечную точку
             Server serv = new Server();
             IPHostEntry ipHost = Dns.GetHostEntry("localhost");
@@ -62,8 +50,13 @@ namespace TestSocetServer
                     Console.Write("Полученный текст: " + data + "\n\n");
 
                     // Отправляем ответ клиенту\
-                    string reply = "Спасибо за запрос в " + data.Length.ToString()
-                            + " символов";
+                    string reply = "";
+
+
+                    if (data.IndexOf("Register: ") > -1)
+                    {
+                        reply = registration(data);
+                    }
                     byte[] msg = Encoding.UTF8.GetBytes(reply);
                     handler.Send(msg);
 
@@ -72,9 +65,11 @@ namespace TestSocetServer
                         Console.WriteLine("Сервер завершил соединение с клиентом.");
                         break;
                     }
+                    
 
                     handler.Shutdown(SocketShutdown.Both);
                     handler.Close();
+                        
                 }
             }
             catch (Exception ex)
@@ -86,6 +81,46 @@ namespace TestSocetServer
                 Console.ReadLine();
             }
         }
+
+        private static string registration(string data) {
+            string reply = "";
+            string[] pData = data.Split(" ");
+            if (pData.Length != 3)
+            {
+                reply = "Please write correct (Registe <login> <password>)";
+            }
+            else
+            {
+                int tmp1;
+                int tmp2;
+                bool isNum1 = int.TryParse(pData[2], out tmp1);
+                bool isNum2 = int.TryParse(pData[1], out tmp2);
+                if (isNum1 || isNum2)
+                {
+                    if (isNum1)
+                    {
+                        reply = "the password must contain at least one letter";
+                    }
+                    if (isNum2)
+                    {
+                        reply = "the login must contain at least one letter";
+                    }
+                    if (isNum2 && isNum1)
+                    {
+                        reply = "login and password must contain at least one letter";
+                    }
+                }
+                else
+                {
+                    int userID = man.register(pData[1], pData[2]);
+                    reply = String.Format("Registration correct ({0})", userID);
+                }
+            }
+
+            return reply;
+        }
+
+
 
     }
 }
