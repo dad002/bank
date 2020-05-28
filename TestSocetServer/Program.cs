@@ -2,6 +2,7 @@
 using System.Text;
 using System.Net;
 using System.Net.Sockets;
+using System.Collections.Generic;
 
 namespace TestSocetServer
 {
@@ -9,7 +10,20 @@ namespace TestSocetServer
     {
         static void Main(string[] args)
         {
-            Sqlite test = new Sqlite("bank.db");
+            Sqlite sql = new Sqlite("bank.db");
+            sql.addUser("test", "as123");
+            sql.addAccount(0);
+            List<UserData> test = sql.getUsers();
+
+            foreach (UserData user in test) {
+                Console.WriteLine(String.Format("{0} {1}" , user.login, user.hPassword));
+            }
+
+            List<AccountData> testA = sql.getAccounts();
+
+            foreach (AccountData acc in testA) {
+                Console.WriteLine(String.Format("{0} {1}", acc.accountID, acc.userID));
+            }
             // Устанавливаем для сокета локальную конечную точку
             Server serv = new Server();
             IPHostEntry ipHost = Dns.GetHostEntry("localhost");
